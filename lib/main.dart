@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:fooderlich/home.dart';
+import 'fooderlish_theme.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(FooderlichApp());
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
+class FooderlichApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp();
+    final theme = FooderlichTheme.dark();
+    return MaterialApp(
+      theme: theme,
+      title: 'Fooderlich',
+      home: Home(),
+    );
   }
 }
