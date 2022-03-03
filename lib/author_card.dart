@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'circle_image.dart';
 import 'fooderlish_theme.dart';
+import 'package:get/get.dart';
 
 class AuthorCard extends StatelessWidget {
   AuthorCard(
@@ -16,7 +18,7 @@ class AuthorCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       child: Row(
-        // TODO 3: add alignment
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           // 1
           Row(
@@ -43,7 +45,15 @@ class AuthorCard extends StatelessWidget {
               ),
             ],
           ),
-          // TODO 2: add IconButton
+          IconButton(
+            icon: Icon(Icons.favorite_border),
+            iconSize: 30,
+            color: Colors.grey[700],
+            onPressed: () {
+              const snackBar = SnackBar(content: Text('Favorite Pressed'));
+              ScaffoldMessenger.of(context).showSnackBar(snackBar);
+            },
+          ),
         ],
       ),
     );
