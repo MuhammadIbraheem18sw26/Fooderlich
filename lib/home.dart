@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fooderlich/card1.dart';
+import 'package:fooderlich/card2.dart';
+import 'package:fooderlich/card3.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -8,14 +11,10 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _selectedIndex = 0;
 
-// 8
   static List<Widget> pages = <Widget>[
-    // TODO: Replace with Card1
-    Container(color: Colors.red),
-    // TODO: Replace with Card2
-    Container(color: Colors.green),
-    // TODO: Replace with Card3
-    Container(color: Colors.blue)
+    Card1(),
+    Card2(),
+    Card3(),
   ];
 
 // 9
