@@ -1,37 +1,27 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Card3 extends StatelessWidget {
   const Card3({Key? key}) : super(key: key);
-  // 1
-  final String category = 'Editor\'s Choice';
-  final String title = 'The Art of Dough';
-  final String description = 'Learn to make the perfect bread.';
-  final String chef = 'Ray Wenderlich';
 
-  // 2
   @override
   Widget build(BuildContext context) {
-    // 3
     return Center(
-      // TODO: Card1 Decorate Container
       child: Container(
-        padding: const EdgeInsets.all(16),
-        // 2
         constraints: const BoxConstraints.expand(
           width: 350,
           height: 450,
         ),
-        // 3
         decoration: const BoxDecoration(
-          // 4
-          image: DecorationImage(
-            // 5
-            image: AssetImage('assets/mag1.png'),
-            // 6
-            fit: BoxFit.cover,
-          ),
-          // 7
-          borderRadius: BorderRadius.all(Radius.circular(10.0)),
+            image: DecorationImage(
+                image: AssetImage('assets/mag2.png'), fit: BoxFit.cover),
+            borderRadius: BorderRadius.all(Radius.circular(13))),
+        child: Stack(
+          children: const [
+            // TODO 5: add dark overlay BoxDecoration
+            // TODO 6: Add Container, Column, Icon and Text
+            // TODO 7: Add Center widget with Chip widget children
+          ],
         ),
       ),
     );
