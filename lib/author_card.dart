@@ -18,8 +18,9 @@ class AuthorCard extends StatefulWidget {
 
 class _AuthorCardState extends State<AuthorCard> {
   @override
+  int count = 0;
+  bool _isFav = false;
   Widget build(BuildContext context) {
-    // TODO: Replace return Container(...);
     return Container(
       padding: const EdgeInsets.all(16),
       child: Row(
@@ -51,16 +52,13 @@ class _AuthorCardState extends State<AuthorCard> {
             ],
           ),
           IconButton(
-            icon: Icon(Icons.favorite_border),
+            icon: Icon(_isFav ? Icons.favorite : Icons.favorite_border),
             iconSize: 30,
-            color: Colors.grey[700],
+            color: Colors.red[700],
             onPressed: () {
-              Get.snackbar(
-                "Added to Fav",
-                "You Added this author into your fav",
-                icon: Icon(Icons.person, color: Colors.white),
-                snackPosition: SnackPosition.BOTTOM,
-              );
+              setState(() {
+                _isFav = !_isFav;
+              });
             },
           ),
         ],
